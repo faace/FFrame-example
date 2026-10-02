@@ -1,16 +1,21 @@
 {
   "ver": "1.0.27",
   "importer": "image",
-  "imported": false,
+  "imported": true,
   "uuid": "ac6ca380-fe84-43d0-96da-ff64249cbd40",
-  "files": [],
+  "files": [
+    ".json",
+    ".png"
+  ],
   "subMetas": {
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
       "uuid": "ac6ca380-fe84-43d0-96da-ff64249cbd40@6c48a",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "wrapModeS": "clamp-to-edge",
@@ -32,8 +37,10 @@
       "ver": "1.0.12",
       "importer": "sprite-frame",
       "uuid": "ac6ca380-fe84-43d0-96da-ff64249cbd40@f9941",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "trimType": "auto",
@@ -111,7 +118,8 @@
             58.5,
             0
           ]
-        }
+        },
+        "atlasUuid": ""
       },
       "displayName": "BtnAd",
       "id": "f9941",

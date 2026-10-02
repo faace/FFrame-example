@@ -1,16 +1,21 @@
 {
   "ver": "1.0.27",
   "importer": "image",
-  "imported": false,
+  "imported": true,
   "uuid": "05c42b36-4316-43c2-952c-b59b9d57b614",
-  "files": [],
+  "files": [
+    ".json",
+    ".png"
+  ],
   "subMetas": {
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
       "uuid": "05c42b36-4316-43c2-952c-b59b9d57b614@6c48a",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "wrapModeS": "clamp-to-edge",
@@ -32,8 +37,10 @@
       "ver": "1.0.12",
       "importer": "sprite-frame",
       "uuid": "05c42b36-4316-43c2-952c-b59b9d57b614@f9941",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "trimType": "auto",
@@ -111,7 +118,8 @@
             40,
             0
           ]
-        }
+        },
+        "atlasUuid": ""
       },
       "displayName": "TabSelected",
       "id": "f9941",

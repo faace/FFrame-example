@@ -1,16 +1,21 @@
 {
   "ver": "1.0.27",
   "importer": "image",
-  "imported": false,
+  "imported": true,
   "uuid": "9795a873-f410-422d-8bf6-2067ee1b5457",
-  "files": [],
+  "files": [
+    ".json",
+    ".png"
+  ],
   "subMetas": {
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
       "uuid": "9795a873-f410-422d-8bf6-2067ee1b5457@6c48a",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "wrapModeS": "clamp-to-edge",
@@ -32,8 +37,10 @@
       "ver": "1.0.12",
       "importer": "sprite-frame",
       "uuid": "9795a873-f410-422d-8bf6-2067ee1b5457@f9941",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "trimType": "auto",
@@ -111,7 +118,8 @@
             47.5,
             0
           ]
-        }
+        },
+        "atlasUuid": ""
       },
       "displayName": "IconGold",
       "id": "f9941",

@@ -1,16 +1,21 @@
 {
   "ver": "1.0.27",
   "importer": "image",
-  "imported": false,
+  "imported": true,
   "uuid": "aee23aba-4262-42c0-bd58-d03810eae5b5",
-  "files": [],
+  "files": [
+    ".json",
+    ".png"
+  ],
   "subMetas": {
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
       "uuid": "aee23aba-4262-42c0-bd58-d03810eae5b5@6c48a",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "wrapModeS": "clamp-to-edge",
@@ -32,8 +37,10 @@
       "ver": "1.0.12",
       "importer": "sprite-frame",
       "uuid": "aee23aba-4262-42c0-bd58-d03810eae5b5@f9941",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "trimType": "auto",
@@ -111,7 +118,8 @@
             16,
             0
           ]
-        }
+        },
+        "atlasUuid": ""
       },
       "displayName": "ProgressFill",
       "id": "f9941",

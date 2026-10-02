@@ -1,9 +1,11 @@
 {
   "ver": "1.0.8",
   "importer": "auto-atlas",
-  "imported": false,
+  "imported": true,
   "uuid": "56b60c81-fd64-40f4-9454-56a1ea462230",
-  "files": [],
+  "files": [
+    ".json"
+  ],
   "subMetas": {},
   "userData": {
     "maxWidth": 1024,

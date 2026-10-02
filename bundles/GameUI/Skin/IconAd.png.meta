@@ -1,16 +1,21 @@
 {
   "ver": "1.0.27",
   "importer": "image",
-  "imported": false,
+  "imported": true,
   "uuid": "580da328-23d9-4a00-b335-8cba8ebd4a72",
-  "files": [],
+  "files": [
+    ".json",
+    ".png"
+  ],
   "subMetas": {
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
       "uuid": "580da328-23d9-4a00-b335-8cba8ebd4a72@6c48a",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "wrapModeS": "clamp-to-edge",
@@ -32,8 +37,10 @@
       "ver": "1.0.12",
       "importer": "sprite-frame",
       "uuid": "580da328-23d9-4a00-b335-8cba8ebd4a72@f9941",
-      "imported": false,
-      "files": [],
+      "imported": true,
+      "files": [
+        ".json"
+      ],
       "subMetas": {},
       "userData": {
         "trimType": "auto",
@@ -111,7 +118,8 @@
             42.5,
             0
           ]
-        }
+        },
+        "atlasUuid": ""
       },
       "displayName": "IconAd",
       "id": "f9941",

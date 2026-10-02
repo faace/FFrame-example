@@ -1,35 +1,67 @@
-import { _decorator, Color, Graphics, Label, Node, UITransform } from 'cc';
-import { GMLayer } from '../../../../gmajor';
+import { _decorator, Node, UITransform } from 'cc';
+import { GMLayer, gu } from '../../../../gmajor';
+import { addSkin, addText, dress, loadSkin, skinInk } from '../../GameUI/SkinKit';
 
 const { ccclass } = _decorator;
 
-/** Demo 弹窗：内容画在 panel 上；mask 由 GMLayer 克隆 */
+/** 设置弹窗：音量条、语言、步进和道具格，用 v3 皮 */
 @ccclass('LyDemoPopup')
 export class LyDemoPopup extends GMLayer {
+    private readonly skins: Array<[Node, string]> = [];
+
     onInit(): void {
         const panel = this.panel;
         if (!panel) return;
         const uit = panel.getComponent(UITransform) ?? panel.addComponent(UITransform);
-        uit.setContentSize(520, 360);
-        const g = panel.getComponent(Graphics) ?? panel.addComponent(Graphics);
-        g.clear();
-        g.fillColor = new Color(20, 20, 20, 230);
-        g.roundRect(-260, -180, 520, 360, 16);
-        g.fill();
-        const title = new Node('title');
-        panel.addChild(title);
-        title.layer = panel.layer;
-        title.addComponent(UITransform).setContentSize(400, 60);
-        const label = title.addComponent(Label);
-        label.string = 'LyDemoPopup';
-        label.fontSize = 32;
-        label.color = Color.WHITE;
-        label.horizontalAlign = Label.HorizontalAlign.CENTER;
-        label.verticalAlign = Label.VerticalAlign.CENTER;
-        console.info('[LyDemoPopup] onInit');
+        uit.setContentSize(600, 760);
+        this.put(panel, 'Panel', 0, 0, 600, 760);
+        this.put(panel, 'TitleBar', 0, 316, 360, 64);
+        addText(panel, '设置', 28, skinInk, 300, 64).node.setPosition(0, 316, 0);
+        const close = this.put(panel, 'BtnClose', 246, 316, 72, 72);
+        const help = this.put(panel, 'BtnHelp', -246, 316, 72, 72);
+        gu.addClick(close, () => gu.closeLayer('LyDemoPopup'));
+        gu.addClick(help, () => gu.alert('音乐、音效和语言都记在本机。'));
+        this.slider(panel, 'IconMusic', '音乐', 200);
+        this.slider(panel, 'IconSfx', '音效', 110);
+        this.put(panel, 'SliderTrack', 30, 20, 280, 24);
+        this.put(panel, 'ProgressFill', -10, 20, 180, 22);
+        addText(panel, '经验', 22, skinInk, 80, 36).node.setPosition(-200, 20, 0);
+        this.put(panel, 'IconLanguage', -200, -70, 56, 56);
+        addText(panel, '语言  中文', 26, skinInk, 220, 48).node.setPosition(20, -70, 0);
+        this.stepper(panel, -170);
+        this.slot(panel, -290);
+        loadSkin((err) => {
+            if (err) return console.error('[LyDemoPopup] 皮加载失败', err);
+            for (const [node, name] of this.skins) dress(node, name);
+        });
     }
 
-    onRemove(): void {
-        console.info('[LyDemoPopup] onRemove');
+    private put(parent: Node, name: string, x: number, y: number, w: number, h: number): Node {
+        const node = addSkin(parent, name, x, y, w, h);
+        this.skins.push([node, name]);
+        return node;
+    }
+
+    private slider(parent: Node, icon: string, text: string, y: number): void {
+        this.put(parent, icon, -230, y, 56, 56);
+        addText(parent, text, 24, skinInk, 80, 40).node.setPosition(-150, y, 0);
+        this.put(parent, 'SliderTrack', 40, y, 280, 28);
+        this.put(parent, 'SliderThumb', 40, y, 44, 44);
+    }
+
+    private stepper(parent: Node, y: number): void {
+        const minus = this.put(parent, 'BtnSmallSecondary', -70, y, 72, 72);
+        this.put(minus, 'IconMinus', 0, 0, 40, 28);
+        this.put(parent, 'PlateStepper', 50, y, 140, 72);
+        addText(parent, '3', 28, skinInk, 140, 72).node.setPosition(50, y, 0);
+        const plus = this.put(parent, 'BtnSmallPrimary', 180, y, 72, 72);
+        this.put(plus, 'IconPlus', 0, 0, 40, 40);
+    }
+
+    private slot(parent: Node, y: number): void {
+        this.put(parent, 'SlotItem', -50, y, 96, 96);
+        this.put(parent, 'IconGold', -50, y, 52, 52);
+        this.put(parent, 'FrameSelect', 80, y, 108, 108);
+        this.put(parent, 'IconDiamond', 80, y, 52, 52);
     }
 }

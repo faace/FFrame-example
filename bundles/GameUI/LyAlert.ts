@@ -1,26 +1,31 @@
-import { _decorator, Color, Graphics, Label, Node, UITransform } from 'cc';
+import { _decorator, Color, Label, Node, UITransform } from 'cc';
 import { GMAlert } from '../../../gmajor';
+import { addSkin, addText, dress, loadSkin, skinInk } from './SkinKit';
 
 const { ccclass } = _decorator;
 
-/** Demo 皮：脚本画灰底；正式游戏改预制体节点即可，不必走这里 */
+/** 确认框皮：v3 背板 + 标题条 + 主次按钮 */
 @ccclass('LyAlert')
 export class LyAlert extends GMAlert {
+    private readonly skins: Array<[Node, string]> = [];
+
     onInit(): void {
         const panel = this.panel;
         if (!panel) return;
         const uit = panel.getComponent(UITransform) ?? panel.addComponent(UITransform);
-        uit.setContentSize(480, 280);
-        const pg = panel.getComponent(Graphics) ?? panel.addComponent(Graphics);
-        pg.clear();
-        pg.fillColor = new Color(20, 20, 20, 240);
-        pg.roundRect(-240, -140, 480, 280, 16);
-        pg.fill();
-        this.body = this.makeLabel(panel, 'body', 32, 0, 40, 400, 120);
-        this.btnCancel = this.makeBtn(panel, 'btnCancel', -110, -80);
-        this.btnOk = this.makeBtn(panel, 'btnOk', 110, -80);
+        uit.setContentSize(520, 340);
+        this.note(addSkin(panel, 'Panel', 0, 0, 520, 340), 'Panel');
+        this.note(addSkin(panel, 'TitleBar', 0, 118, 360, 64), 'TitleBar');
+        addText(panel, '提示', 28, skinInk, 300, 64).node.setPosition(0, 118, 0);
+        this.body = this.makeLabel(panel, 'body', 28, 0, 28, 440, 100);
+        this.btnCancel = this.makeBtn(panel, 'btnCancel', 'BtnSecondary', '取消', -120, -108, skinInk);
+        this.btnOk = this.makeBtn(panel, 'btnOk', 'BtnPrimary', '确定', 120, -108, Color.WHITE);
         this.cancelLabel = this.btnCancel.getChildByName('label')?.getComponent(Label) ?? null;
         this.okLabel = this.btnOk.getChildByName('label')?.getComponent(Label) ?? null;
+        loadSkin((err) => {
+            if (err) return console.error('[LyAlert] 皮加载失败', err);
+            for (const [node, name] of this.skins) dress(node, name);
+        });
         console.info('[LyAlert] onInit');
     }
 
@@ -28,33 +33,22 @@ export class LyAlert extends GMAlert {
         console.info('[LyAlert] onRemove');
     }
 
-    private makeBtn(parent: Node, name: string, x: number, y: number): Node {
-        const node = new Node(name);
-        parent.addChild(node);
-        node.layer = parent.layer;
-        node.setPosition(x, y, 0);
-        node.addComponent(UITransform).setContentSize(160, 56);
-        const g = node.addComponent(Graphics);
-        g.fillColor = new Color(50, 90, 160, 255);
-        g.roundRect(-80, -28, 160, 56, 8);
-        g.fill();
-        this.makeLabel(node, 'label', 26, 0, 0, 160, 56);
+    private note(node: Node, name: string): Node {
+        this.skins.push([node, name]);
+        return node;
+    }
+
+    private makeBtn(parent: Node, nodeName: string, skin: string, text: string, x: number, y: number, color: Color): Node {
+        const node = this.note(addSkin(parent, skin, x, y, 200, 72), skin);
+        node.name = nodeName; // GMAlert 按 btnOk / btnCancel 找
+        addText(node, text, 26, color, 200, 72);
         return node;
     }
 
     private makeLabel(parent: Node, name: string, fontSize: number, x: number, y: number, w: number, h: number): Label {
-        const node = new Node(name);
-        parent.addChild(node);
-        node.layer = parent.layer;
-        node.setPosition(x, y, 0);
-        node.addComponent(UITransform).setContentSize(w, h);
-        const label = node.addComponent(Label);
-        label.string = '';
-        label.fontSize = fontSize;
-        label.color = Color.WHITE;
-        label.horizontalAlign = Label.HorizontalAlign.CENTER;
-        label.verticalAlign = Label.VerticalAlign.CENTER;
-        label.overflow = Label.Overflow.CLAMP;
+        const label = addText(parent, '', fontSize, skinInk, w, h);
+        label.node.name = name;
+        label.node.setPosition(x, y, 0);
         return label;
     }
 }
