@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "4986a4a6-c9d4-43ea-a228-fc8f2268af08",
+  "uuid": "5d3b001a-4057-449b-a2d8-4360ad000087",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@6c48a",
+      "uuid": "5d3b001a-4057-449b-a2d8-4360ad000087@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,58 +26,58 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "4986a4a6-c9d4-43ea-a228-fc8f2268af08",
+        "imageUuidOrDatabaseUri": "5d3b001a-4057-449b-a2d8-4360ad000087",
         "visible": false
       },
-      "displayName": "IconDiamond",
+      "displayName": "btn_info",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@f9941",
+      "uuid": "5d3b001a-4057-449b-a2d8-4360ad000087@f9941",
       "imported": true,
       "files": [
         ".json"
       ],
       "subMetas": {},
       "userData": {
-        "trimType": "none",
+        "trimType": "auto",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 110,
-        "height": 110,
-        "rawWidth": 110,
-        "rawHeight": 110,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
+        "width": 384,
+        "height": 123,
+        "rawWidth": 384,
+        "rawHeight": 123,
+        "borderTop": 29,
+        "borderBottom": 29,
+        "borderLeft": 27,
+        "borderRight": 26,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@6c48a",
+        "imageUuidOrDatabaseUri": "5d3b001a-4057-449b-a2d8-4360ad000087@6c48a",
         "vertices": {
           "rawPosition": [
-            -55,
-            -55,
+            -192,
+            -61.5,
             0,
-            55,
-            -55,
+            192,
+            -61.5,
             0,
-            -55,
-            55,
+            -192,
+            61.5,
             0,
-            55,
-            55,
+            192,
+            61.5,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            110,
-            110,
-            110,
+            123,
+            384,
+            123,
             0,
             0,
-            110,
+            384,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -55,
-            -55,
+            -192,
+            -61.5,
             0
           ],
           "maxPos": [
-            55,
-            55,
+            192,
+            61.5,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "IconDiamond",
+      "displayName": "btn_info",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@6c48a"
+    "redirect": "5d3b001a-4057-449b-a2d8-4360ad000087@6c48a"
   }
 }

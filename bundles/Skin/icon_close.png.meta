@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "05c42b36-4316-43c2-952c-b59b9d57b614",
+  "uuid": "c27b0465-d1a7-47b7-97d5-55c004c6f3c0",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "05c42b36-4316-43c2-952c-b59b9d57b614@6c48a",
+      "uuid": "c27b0465-d1a7-47b7-97d5-55c004c6f3c0@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,58 +26,58 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "05c42b36-4316-43c2-952c-b59b9d57b614",
+        "imageUuidOrDatabaseUri": "c27b0465-d1a7-47b7-97d5-55c004c6f3c0",
         "visible": false
       },
-      "displayName": "TabSelected",
+      "displayName": "icon_close",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "05c42b36-4316-43c2-952c-b59b9d57b614@f9941",
+      "uuid": "c27b0465-d1a7-47b7-97d5-55c004c6f3c0@f9941",
       "imported": true,
       "files": [
         ".json"
       ],
       "subMetas": {},
       "userData": {
-        "trimType": "auto",
+        "trimType": "none",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 247,
-        "height": 93,
-        "rawWidth": 247,
-        "rawHeight": 93,
-        "borderTop": 26,
-        "borderBottom": 17,
-        "borderLeft": 28,
-        "borderRight": 25,
+        "width": 110,
+        "height": 110,
+        "rawWidth": 110,
+        "rawHeight": 110,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "05c42b36-4316-43c2-952c-b59b9d57b614@6c48a",
+        "imageUuidOrDatabaseUri": "c27b0465-d1a7-47b7-97d5-55c004c6f3c0@6c48a",
         "vertices": {
           "rawPosition": [
-            -123.5,
-            -46.5,
+            -55,
+            -55,
             0,
-            123.5,
-            -46.5,
+            55,
+            -55,
             0,
-            -123.5,
-            46.5,
+            -55,
+            55,
             0,
-            123.5,
-            46.5,
+            55,
+            55,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            93,
-            247,
-            93,
+            110,
+            110,
+            110,
             0,
             0,
-            247,
+            110,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -123.5,
-            -46.5,
+            -55,
+            -55,
             0
           ],
           "maxPos": [
-            123.5,
-            46.5,
+            55,
+            55,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "TabSelected",
+      "displayName": "icon_close",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "05c42b36-4316-43c2-952c-b59b9d57b614@6c48a"
+    "redirect": "c27b0465-d1a7-47b7-97d5-55c004c6f3c0@6c48a"
   }
 }

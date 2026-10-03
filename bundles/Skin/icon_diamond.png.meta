@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "aee23aba-4262-42c0-bd58-d03810eae5b5",
+  "uuid": "4986a4a6-c9d4-43ea-a228-fc8f2268af08",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "aee23aba-4262-42c0-bd58-d03810eae5b5@6c48a",
+      "uuid": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,58 +26,58 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "aee23aba-4262-42c0-bd58-d03810eae5b5",
+        "imageUuidOrDatabaseUri": "4986a4a6-c9d4-43ea-a228-fc8f2268af08",
         "visible": false
       },
-      "displayName": "ProgressFill",
+      "displayName": "icon_diamond",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "aee23aba-4262-42c0-bd58-d03810eae5b5@f9941",
+      "uuid": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@f9941",
       "imported": true,
       "files": [
         ".json"
       ],
       "subMetas": {},
       "userData": {
-        "trimType": "auto",
+        "trimType": "none",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 278,
-        "height": 35,
-        "rawWidth": 278,
-        "rawHeight": 35,
-        "borderTop": 9,
-        "borderBottom": 9,
-        "borderLeft": 9,
-        "borderRight": 9,
+        "width": 110,
+        "height": 110,
+        "rawWidth": 110,
+        "rawHeight": 110,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "aee23aba-4262-42c0-bd58-d03810eae5b5@6c48a",
+        "imageUuidOrDatabaseUri": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@6c48a",
         "vertices": {
           "rawPosition": [
-            -139,
-            -17.5,
+            -55,
+            -55,
             0,
-            139,
-            -17.5,
+            55,
+            -55,
             0,
-            -139,
-            17.5,
+            -55,
+            55,
             0,
-            139,
-            17.5,
+            55,
+            55,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            35,
-            278,
-            35,
+            110,
+            110,
+            110,
             0,
             0,
-            278,
+            110,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -139,
-            -17.5,
+            -55,
+            -55,
             0
           ],
           "maxPos": [
-            139,
-            17.5,
+            55,
+            55,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "ProgressFill",
+      "displayName": "icon_diamond",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "aee23aba-4262-42c0-bd58-d03810eae5b5@6c48a"
+    "redirect": "4986a4a6-c9d4-43ea-a228-fc8f2268af08@6c48a"
   }
 }

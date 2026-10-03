@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "55407d1a-c65c-4d01-b710-32e4cd23d8dd",
+  "uuid": "fb1c73a2-6187-449d-8d38-31ba0dad395e",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@6c48a",
+      "uuid": "fb1c73a2-6187-449d-8d38-31ba0dad395e@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,58 +26,58 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "55407d1a-c65c-4d01-b710-32e4cd23d8dd",
+        "imageUuidOrDatabaseUri": "fb1c73a2-6187-449d-8d38-31ba0dad395e",
         "visible": false
       },
-      "displayName": "Panel",
+      "displayName": "icon_sfx",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@f9941",
+      "uuid": "fb1c73a2-6187-449d-8d38-31ba0dad395e@f9941",
       "imported": true,
       "files": [
         ".json"
       ],
       "subMetas": {},
       "userData": {
-        "trimType": "auto",
+        "trimType": "none",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 258,
-        "height": 269,
-        "rawWidth": 258,
-        "rawHeight": 269,
-        "borderTop": 28,
-        "borderBottom": 31,
-        "borderLeft": 23,
-        "borderRight": 25,
+        "width": 110,
+        "height": 110,
+        "rawWidth": 110,
+        "rawHeight": 110,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@6c48a",
+        "imageUuidOrDatabaseUri": "fb1c73a2-6187-449d-8d38-31ba0dad395e@6c48a",
         "vertices": {
           "rawPosition": [
-            -129,
-            -134.5,
+            -55,
+            -55,
             0,
-            129,
-            -134.5,
+            55,
+            -55,
             0,
-            -129,
-            134.5,
+            -55,
+            55,
             0,
-            129,
-            134.5,
+            55,
+            55,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            269,
-            258,
-            269,
+            110,
+            110,
+            110,
             0,
             0,
-            258,
+            110,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -129,
-            -134.5,
+            -55,
+            -55,
             0
           ],
           "maxPos": [
-            129,
-            134.5,
+            55,
+            55,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "Panel",
+      "displayName": "icon_sfx",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@6c48a"
+    "redirect": "fb1c73a2-6187-449d-8d38-31ba0dad395e@6c48a"
   }
 }

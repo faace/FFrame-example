@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "b3406ac1-ddfa-4265-88aa-68897d36fd53",
+  "uuid": "9cfbd4e0-90f4-4688-aa0d-cf4768350c67",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "b3406ac1-ddfa-4265-88aa-68897d36fd53@6c48a",
+      "uuid": "9cfbd4e0-90f4-4688-aa0d-cf4768350c67@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,17 +26,17 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b3406ac1-ddfa-4265-88aa-68897d36fd53",
+        "imageUuidOrDatabaseUri": "9cfbd4e0-90f4-4688-aa0d-cf4768350c67",
         "visible": false
       },
-      "displayName": "PlateStepper",
+      "displayName": "frame_select",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "b3406ac1-ddfa-4265-88aa-68897d36fd53@f9941",
+      "uuid": "9cfbd4e0-90f4-4688-aa0d-cf4768350c67@f9941",
       "imported": true,
       "files": [
         ".json"
@@ -50,34 +50,34 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 269,
-        "height": 103,
-        "rawWidth": 269,
-        "rawHeight": 103,
-        "borderTop": 17,
-        "borderBottom": 21,
-        "borderLeft": 22,
-        "borderRight": 23,
+        "width": 111,
+        "height": 132,
+        "rawWidth": 111,
+        "rawHeight": 132,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b3406ac1-ddfa-4265-88aa-68897d36fd53@6c48a",
+        "imageUuidOrDatabaseUri": "9cfbd4e0-90f4-4688-aa0d-cf4768350c67@6c48a",
         "vertices": {
           "rawPosition": [
-            -134.5,
-            -51.5,
+            -55.5,
+            -66,
             0,
-            134.5,
-            -51.5,
+            55.5,
+            -66,
             0,
-            -134.5,
-            51.5,
+            -55.5,
+            66,
             0,
-            134.5,
-            51.5,
+            55.5,
+            66,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            103,
-            269,
-            103,
+            132,
+            111,
+            132,
             0,
             0,
-            269,
+            111,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -134.5,
-            -51.5,
+            -55.5,
+            -66,
             0
           ],
           "maxPos": [
-            134.5,
-            51.5,
+            55.5,
+            66,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "PlateStepper",
+      "displayName": "frame_select",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "b3406ac1-ddfa-4265-88aa-68897d36fd53@6c48a"
+    "redirect": "9cfbd4e0-90f4-4688-aa0d-cf4768350c67@6c48a"
   }
 }

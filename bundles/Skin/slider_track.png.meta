@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "075aa98d-9fff-42ff-8f75-29838e2f1f3b",
+  "uuid": "1929048c-26c9-4e62-8ebb-4e611f126238",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "075aa98d-9fff-42ff-8f75-29838e2f1f3b@6c48a",
+      "uuid": "1929048c-26c9-4e62-8ebb-4e611f126238@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,17 +26,17 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "075aa98d-9fff-42ff-8f75-29838e2f1f3b",
+        "imageUuidOrDatabaseUri": "1929048c-26c9-4e62-8ebb-4e611f126238",
         "visible": false
       },
-      "displayName": "primary",
+      "displayName": "slider_track",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "075aa98d-9fff-42ff-8f75-29838e2f1f3b@f9941",
+      "uuid": "1929048c-26c9-4e62-8ebb-4e611f126238@f9941",
       "imported": true,
       "files": [
         ".json"
@@ -50,34 +50,34 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 384,
-        "height": 116,
-        "rawWidth": 384,
-        "rawHeight": 116,
-        "borderTop": 29,
-        "borderBottom": 26,
-        "borderLeft": 27,
-        "borderRight": 26,
+        "width": 289,
+        "height": 29,
+        "rawWidth": 289,
+        "rawHeight": 29,
+        "borderTop": 9,
+        "borderBottom": 8,
+        "borderLeft": 8,
+        "borderRight": 7,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "075aa98d-9fff-42ff-8f75-29838e2f1f3b@6c48a",
+        "imageUuidOrDatabaseUri": "1929048c-26c9-4e62-8ebb-4e611f126238@6c48a",
         "vertices": {
           "rawPosition": [
-            -192,
-            -58,
+            -144.5,
+            -14.5,
             0,
-            192,
-            -58,
+            144.5,
+            -14.5,
             0,
-            -192,
-            58,
+            -144.5,
+            14.5,
             0,
-            192,
-            58,
+            144.5,
+            14.5,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            116,
-            384,
-            116,
+            29,
+            289,
+            29,
             0,
             0,
-            384,
+            289,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -192,
-            -58,
+            -144.5,
+            -14.5,
             0
           ],
           "maxPos": [
-            192,
-            58,
+            144.5,
+            14.5,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "primary",
+      "displayName": "slider_track",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "075aa98d-9fff-42ff-8f75-29838e2f1f3b@6c48a"
+    "redirect": "1929048c-26c9-4e62-8ebb-4e611f126238@6c48a"
   }
 }

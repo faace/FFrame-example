@@ -2,8 +2,8 @@ import { Color, Label, Node, Sprite, SpriteFrame, Texture2D, UITransform, Widget
 import { loadSkin as loadSkinBundle, skinFrame as readSkin } from '../../../gmajor';
 
 const SLICED = new Set([
-    'TitleBar', 'Panel', 'primary', 'secondary', 'warning', 'neutral', 'info',
-    'TabNormal', 'TabSelected', 'PlateStepper', 'SliderTrack', 'ProgressFill', 'BarBg', 'BarFill',
+    'title_bar', 'panel', 'btn_primary', 'btn_secondary', 'btn_warning', 'btn_neutral', 'btn_info',
+    'tab_normal', 'tab_selected', 'stepper_plate', 'slider_track', 'progress_fill', 'bar_bg', 'bar_fill',
 ]);
 
 /** 等开机载入的 Skin 包。已经在内存里则立刻回调 */

@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "fb1c73a2-6187-449d-8d38-31ba0dad395e",
+  "uuid": "dd9a36cd-47bd-42b6-86fe-ea7b536602de",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "fb1c73a2-6187-449d-8d38-31ba0dad395e@6c48a",
+      "uuid": "dd9a36cd-47bd-42b6-86fe-ea7b536602de@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,58 +26,58 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "fb1c73a2-6187-449d-8d38-31ba0dad395e",
+        "imageUuidOrDatabaseUri": "dd9a36cd-47bd-42b6-86fe-ea7b536602de",
         "visible": false
       },
-      "displayName": "IconSfx",
+      "displayName": "title_bar",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "fb1c73a2-6187-449d-8d38-31ba0dad395e@f9941",
+      "uuid": "dd9a36cd-47bd-42b6-86fe-ea7b536602de@f9941",
       "imported": true,
       "files": [
         ".json"
       ],
       "subMetas": {},
       "userData": {
-        "trimType": "none",
+        "trimType": "auto",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 110,
-        "height": 110,
-        "rawWidth": 110,
-        "rawHeight": 110,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
+        "width": 554,
+        "height": 85,
+        "rawWidth": 554,
+        "rawHeight": 85,
+        "borderTop": 22,
+        "borderBottom": 20,
+        "borderLeft": 40,
+        "borderRight": 40,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "fb1c73a2-6187-449d-8d38-31ba0dad395e@6c48a",
+        "imageUuidOrDatabaseUri": "dd9a36cd-47bd-42b6-86fe-ea7b536602de@6c48a",
         "vertices": {
           "rawPosition": [
-            -55,
-            -55,
+            -277,
+            -42.5,
             0,
-            55,
-            -55,
+            277,
+            -42.5,
             0,
-            -55,
-            55,
+            -277,
+            42.5,
             0,
-            55,
-            55,
+            277,
+            42.5,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            110,
-            110,
-            110,
+            85,
+            554,
+            85,
             0,
             0,
-            110,
+            554,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -55,
-            -55,
+            -277,
+            -42.5,
             0
           ],
           "maxPos": [
-            55,
-            55,
+            277,
+            42.5,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "IconSfx",
+      "displayName": "title_bar",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "fb1c73a2-6187-449d-8d38-31ba0dad395e@6c48a"
+    "redirect": "dd9a36cd-47bd-42b6-86fe-ea7b536602de@6c48a"
   }
 }

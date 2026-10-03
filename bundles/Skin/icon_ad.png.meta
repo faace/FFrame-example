@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "16f21f42-a7a2-49b7-bef4-699b0a27fde0",
+  "uuid": "580da328-23d9-4a00-b335-8cba8ebd4a72",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@6c48a",
+      "uuid": "580da328-23d9-4a00-b335-8cba8ebd4a72@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,58 +26,58 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "16f21f42-a7a2-49b7-bef4-699b0a27fde0",
+        "imageUuidOrDatabaseUri": "580da328-23d9-4a00-b335-8cba8ebd4a72",
         "visible": false
       },
-      "displayName": "BarFill",
+      "displayName": "icon_ad",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@f9941",
+      "uuid": "580da328-23d9-4a00-b335-8cba8ebd4a72@f9941",
       "imported": true,
       "files": [
         ".json"
       ],
       "subMetas": {},
       "userData": {
-        "trimType": "auto",
+        "trimType": "none",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 322,
-        "height": 55,
-        "rawWidth": 322,
-        "rawHeight": 55,
-        "borderTop": 18,
-        "borderBottom": 19,
-        "borderLeft": 19,
-        "borderRight": 19,
+        "width": 110,
+        "height": 110,
+        "rawWidth": 110,
+        "rawHeight": 110,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@6c48a",
+        "imageUuidOrDatabaseUri": "580da328-23d9-4a00-b335-8cba8ebd4a72@6c48a",
         "vertices": {
           "rawPosition": [
-            -161,
-            -27.5,
+            -55,
+            -55,
             0,
-            161,
-            -27.5,
+            55,
+            -55,
             0,
-            -161,
-            27.5,
+            -55,
+            55,
             0,
-            161,
-            27.5,
+            55,
+            55,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            55,
-            322,
-            55,
+            110,
+            110,
+            110,
             0,
             0,
-            322,
+            110,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -161,
-            -27.5,
+            -55,
+            -55,
             0
           ],
           "maxPos": [
-            161,
-            27.5,
+            55,
+            55,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "BarFill",
+      "displayName": "icon_ad",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@6c48a"
+    "redirect": "580da328-23d9-4a00-b335-8cba8ebd4a72@6c48a"
   }
 }

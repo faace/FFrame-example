@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "9795a873-f410-422d-8bf6-2067ee1b5457",
+  "uuid": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "9795a873-f410-422d-8bf6-2067ee1b5457@6c48a",
+      "uuid": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,58 +26,58 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "9795a873-f410-422d-8bf6-2067ee1b5457",
+        "imageUuidOrDatabaseUri": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f",
         "visible": false
       },
-      "displayName": "IconGold",
+      "displayName": "bar_bg",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "9795a873-f410-422d-8bf6-2067ee1b5457@f9941",
+      "uuid": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@f9941",
       "imported": true,
       "files": [
         ".json"
       ],
       "subMetas": {},
       "userData": {
-        "trimType": "none",
+        "trimType": "auto",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 110,
-        "height": 110,
-        "rawWidth": 110,
-        "rawHeight": 110,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
+        "width": 440,
+        "height": 70,
+        "rawWidth": 440,
+        "rawHeight": 70,
+        "borderTop": 25,
+        "borderBottom": 26,
+        "borderLeft": 26,
+        "borderRight": 25,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "9795a873-f410-422d-8bf6-2067ee1b5457@6c48a",
+        "imageUuidOrDatabaseUri": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@6c48a",
         "vertices": {
           "rawPosition": [
-            -55,
-            -55,
+            -220,
+            -35,
             0,
-            55,
-            -55,
+            220,
+            -35,
             0,
-            -55,
-            55,
+            -220,
+            35,
             0,
-            55,
-            55,
+            220,
+            35,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            110,
-            110,
-            110,
+            70,
+            440,
+            70,
             0,
             0,
-            110,
+            440,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -55,
-            -55,
+            -220,
+            -35,
             0
           ],
           "maxPos": [
-            55,
-            55,
+            220,
+            35,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "IconGold",
+      "displayName": "bar_bg",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "9795a873-f410-422d-8bf6-2067ee1b5457@6c48a"
+    "redirect": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@6c48a"
   }
 }

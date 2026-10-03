@@ -12,16 +12,16 @@ export class LySetting extends GMLayer {
     onInit(): void {
         const panel = this.panel;
         if (!panel) return;
-        const plate = this.put(panel, 'Panel', 0, 0, 600, 760);
+        const plate = this.put(panel, 'panel', 0, 0, 600, 760);
         plate.setSiblingIndex(0); // 背板垫在预制体里的标题和按钮下面
         const close = panel.getChildByName('btnClose');
         const help = panel.getChildByName('btnHelp');
         if (close) gu.addClick(close, () => gu.closeLayer('LySetting'));
         if (help) gu.addClick(help, () => gu.alert('音乐、音效和语言都记在本机。'));
-        this.caption(panel, 'IconMusic', '音乐', 200);
-        this.caption(panel, 'IconSfx', '音效', 110);
+        this.caption(panel, 'icon_music', '音乐', 200);
+        this.caption(panel, 'icon_sfx', '音效', 110);
         addText(panel, '经验', 22, skinInk, 80, 36).node.setPosition(-220, 16, 0);
-        this.put(panel, 'IconSettings', -220, -80, 56, 56);
+        this.put(panel, 'icon_settings', -220, -80, 56, 56);
         addText(panel, '语言  中文', 26, skinInk, 220, 48).node.setPosition(20, -80, 0);
         this.bindBar(panel);
         this.bindStepper(panel);
@@ -61,9 +61,9 @@ export class LySetting extends GMLayer {
     }
 
     private slot(parent: Node, y: number): void {
-        this.put(parent, 'SlotItem', -50, y, 96, 96);
-        this.put(parent, 'IconGold', -50, y, 52, 52);
-        this.put(parent, 'FrameSelect', 80, y, 108, 108);
-        this.put(parent, 'IconDiamond', 80, y, 52, 52);
+        this.put(parent, 'slot_item', -50, y, 96, 96);
+        this.put(parent, 'icon_gold', -50, y, 52, 52);
+        this.put(parent, 'frame_select', 80, y, 108, 108);
+        this.put(parent, 'icon_diamond', 80, y, 52, 52);
     }
 }
