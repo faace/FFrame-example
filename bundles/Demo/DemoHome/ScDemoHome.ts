@@ -28,6 +28,6 @@ export class ScDemoHome extends GMScene {
     }
 
     private openSetting(): void {
-        gu.showLayer('LyDemoPopup', { bundle: 'DemoHome' });
+        gu.showLayer('LySetting', { bundle: 'DemoHome' });
     }
 }

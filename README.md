@@ -25,6 +25,6 @@ git clone https://github.com/faace/FFrame-example.git assets/game
 
 这些是验收过的用法，入口不再主动调用。
 
-- **LyDemoPopup**：一张弹窗，内容画在 `panel` 上，遮罩由框架克隆。
+- **LySetting**：设置，内容画在 `panel` 上，遮罩由框架克隆。
 - **PfDemoItem**：列表项。拿到脚本后改数量，不直接改节点。
 - **DemoChild**：子包的绑定生命周期（`onInit` / `onBind` / `onStart` / `onUnbind` / `onRemove`），只打日志。要看它，得由别的包再去绑定 `DemoChild`。

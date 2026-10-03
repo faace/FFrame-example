@@ -1,28 +1,23 @@
-import { _decorator, Node, UITransform } from 'cc';
+import { _decorator, Node } from 'cc';
 import { GMLayer, gu } from '../../../../gmajor';
 import { addSkin, addText, dress, loadSkin, skinInk } from '../../GameUI/SkinKit';
 
 const { ccclass } = _decorator;
 
-/** 设置弹窗：音量、经验条、步进和道具格，用 v7 皮 */
-@ccclass('LyDemoPopup')
-export class LyDemoPopup extends GMLayer {
+/** 设置：音量、经验条、步进和道具格，用 v7 皮 */
+@ccclass('LySetting')
+export class LySetting extends GMLayer {
     private readonly skins: Array<[Node, string]> = [];
 
     onInit(): void {
         const panel = this.panel;
         if (!panel) return;
-        const uit = panel.getComponent(UITransform) ?? panel.addComponent(UITransform);
-        uit.setContentSize(600, 760);
-        this.put(panel, 'Panel', 0, 0, 600, 760);
-        this.put(panel, 'TitleBar', 0, 316, 360, 64);
-        addText(panel, '设置', 28, skinInk, 300, 64).node.setPosition(0, 316, 0);
-        const close = this.put(panel, 'secondary', 246, 316, 72, 72);
-        this.put(close, 'IconClose', 0, 0, 36, 36);
-        const help = this.put(panel, 'secondary', -246, 316, 72, 72);
-        this.put(help, 'IconHelp', 0, 0, 28, 40);
-        gu.addClick(close, () => gu.closeLayer('LyDemoPopup'));
-        gu.addClick(help, () => gu.alert('音乐、音效和语言都记在本机。'));
+        const plate = this.put(panel, 'Panel', 0, 0, 600, 760);
+        plate.setSiblingIndex(0); // 背板垫在预制体里的标题和按钮下面
+        const close = panel.getChildByName('btnClose');
+        const help = panel.getChildByName('btnHelp');
+        if (close) gu.addClick(close, () => gu.closeLayer('LySetting'));
+        if (help) gu.addClick(help, () => gu.alert('音乐、音效和语言都记在本机。'));
         this.slider(panel, 'IconMusic', '音乐', 200);
         this.slider(panel, 'IconSfx', '音效', 110);
         this.put(panel, 'XpTrack', 40, 16, 320, 64);
@@ -33,7 +28,7 @@ export class LyDemoPopup extends GMLayer {
         this.stepper(panel, -170);
         this.slot(panel, -290);
         loadSkin((err) => {
-            if (err) return console.error('[LyDemoPopup] 皮加载失败', err);
+            if (err) return console.error('[LySetting] 皮加载失败', err);
             for (const [node, name] of this.skins) dress(node, name);
         });
     }
