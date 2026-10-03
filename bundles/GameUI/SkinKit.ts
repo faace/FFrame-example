@@ -1,37 +1,42 @@
-import { Color, Label, Node, Sprite, SpriteAtlas, SpriteFrame, Texture2D, UITransform, Widget } from 'cc';
+import { Color, Label, Node, Sprite, SpriteFrame, Texture2D, UITransform, Widget } from 'cc';
 import { gm } from '../../../gmajor';
 
 const SLICED = new Set([
     'TitleBar', 'Panel', 'BtnPrimary', 'BtnSecondary', 'BtnAd', 'BtnGold', 'BtnDiamond',
-    'TabNormal', 'TabSelected', 'PlateStepper', 'SliderTrack', 'ProgressFill',
+    'TabNormal', 'TabSelected', 'PlateStepper', 'SliderTrack', 'ProgressFill', 'XpTrack', 'XpFill',
 ]);
 
 let frames: Map<string, SpriteFrame> | null = null;
 let waiters: Array<(err: Error | null) => void> | null = null;
 
-/** 读 GameUI/Skin 下全部 SpriteFrame；已在内存则立刻回调 */
+/** 读框架默认皮 GMSkin（gmajor/ui/skin）；已在内存则立刻回调 */
 export function loadSkin(done: (err: Error | null) => void): void {
     if (frames) return done(null);
     if (waiters) return waiters.push(done);
-    const bundle = gm.resource.getBundle('GameUI');
-    if (!bundle) return done(new Error('[Skin] GameUI 未加载'));
     waiters = [done];
-    bundle.loadDir('Skin', SpriteFrame, (err, assets) => {
+    const fail = (err: Error) => {
         const pending = waiters ?? [];
         waiters = null;
-        frames = assets?.length ? indexFrames(assets) : new Map();
-        if ((frames?.size ?? 0) >= 10) return finishSkin(pending);
-        bundle.load('Skin/Skin', SpriteAtlas, (atlasErr, atlas) => {
-            if (!atlasErr && atlas) frames = indexAtlas(atlas, frames);
-            if (!frames?.size) {
-                const fail = err ?? atlasErr ?? new Error('[Skin] 没有 SpriteFrame');
-                pending.forEach((fn) => fn(fail));
+        pending.forEach((fn) => fn(err));
+    };
+    const afterBundle = (err: Error | null) => {
+        if (err) return fail(err);
+        const bundle = gm.resource.getBundle('GMSkin');
+        if (!bundle) return fail(new Error('[Skin] GMSkin 未加载'));
+        bundle.loadDir('', SpriteFrame, (loadErr, assets) => {
+            const pending = waiters ?? [];
+            waiters = null;
+            frames = assets?.length ? indexFrames(assets) : new Map();
+            if (!frames.size) {
+                pending.forEach((fn) => fn(loadErr ?? new Error('[Skin] 没有 SpriteFrame')));
                 frames = null;
                 return;
             }
             finishSkin(pending);
         });
-    });
+    };
+    if (gm.resource.hasBundle('GMSkin')) return afterBundle(null);
+    gm.resource.loadBundle('GMSkin', afterBundle);
 }
 
 export function skinFrame(name: string): SpriteFrame | null { // 未载入时是 null
@@ -77,18 +82,6 @@ function indexFrames(assets: SpriteFrame[]): Map<string, SpriteFrame> {
     const map = new Map<string, SpriteFrame>();
     for (const frame of assets) {
         const name = frame.name.replace(/\/spriteFrame$/, '').replace(/\.png$/i, '');
-        if (name && name !== 'spriteFrame') map.set(name, frame);
-    }
-    return map;
-}
-
-function indexAtlas(atlas: SpriteAtlas, base: Map<string, SpriteFrame> | null): Map<string, SpriteFrame> {
-    const map = base ?? new Map<string, SpriteFrame>();
-    const table = atlas.spriteFrames;
-    for (const key of Object.keys(table)) {
-        const frame = table[key];
-        if (!frame) continue;
-        const name = (frame.name || key).replace(/\/spriteFrame$/, '').replace(/\.png$/i, '');
         if (name && name !== 'spriteFrame') map.set(name, frame);
     }
     return map;

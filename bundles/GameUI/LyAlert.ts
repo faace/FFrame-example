@@ -4,7 +4,7 @@ import { addSkin, addText, dress, loadSkin, skinInk } from './SkinKit';
 
 const { ccclass } = _decorator;
 
-/** 确认框皮：v3 背板 + 标题条 + 主次按钮 */
+/** 确认框皮：v7 背板 + 标题条 + 主次按钮 */
 @ccclass('LyAlert')
 export class LyAlert extends GMAlert {
     private readonly skins: Array<[Node, string]> = [];

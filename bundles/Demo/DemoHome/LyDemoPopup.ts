@@ -4,7 +4,7 @@ import { addSkin, addText, dress, loadSkin, skinInk } from '../../GameUI/SkinKit
 
 const { ccclass } = _decorator;
 
-/** 设置弹窗：音量条、语言、步进和道具格，用 v3 皮 */
+/** 设置弹窗：音量、经验条、步进和道具格，用 v7 皮 */
 @ccclass('LyDemoPopup')
 export class LyDemoPopup extends GMLayer {
     private readonly skins: Array<[Node, string]> = [];
@@ -17,17 +17,19 @@ export class LyDemoPopup extends GMLayer {
         this.put(panel, 'Panel', 0, 0, 600, 760);
         this.put(panel, 'TitleBar', 0, 316, 360, 64);
         addText(panel, '设置', 28, skinInk, 300, 64).node.setPosition(0, 316, 0);
-        const close = this.put(panel, 'BtnClose', 246, 316, 72, 72);
-        const help = this.put(panel, 'BtnHelp', -246, 316, 72, 72);
+        const close = this.put(panel, 'BtnSecondary', 246, 316, 72, 72);
+        this.put(close, 'IconClose', 0, 0, 36, 36);
+        const help = this.put(panel, 'BtnSecondary', -246, 316, 72, 72);
+        this.put(help, 'IconHelp', 0, 0, 28, 40);
         gu.addClick(close, () => gu.closeLayer('LyDemoPopup'));
         gu.addClick(help, () => gu.alert('音乐、音效和语言都记在本机。'));
         this.slider(panel, 'IconMusic', '音乐', 200);
         this.slider(panel, 'IconSfx', '音效', 110);
-        this.put(panel, 'SliderTrack', 30, 20, 280, 24);
-        this.put(panel, 'ProgressFill', -10, 20, 180, 22);
-        addText(panel, '经验', 22, skinInk, 80, 36).node.setPosition(-200, 20, 0);
-        this.put(panel, 'IconLanguage', -200, -70, 56, 56);
-        addText(panel, '语言  中文', 26, skinInk, 220, 48).node.setPosition(20, -70, 0);
+        this.put(panel, 'XpTrack', 40, 16, 320, 64);
+        this.put(panel, 'XpFill', 8, 16, 200, 40);
+        addText(panel, '经验', 22, skinInk, 80, 36).node.setPosition(-220, 16, 0);
+        this.put(panel, 'IconSettings', -220, -80, 56, 56);
+        addText(panel, '语言  中文', 26, skinInk, 220, 48).node.setPosition(20, -80, 0);
         this.stepper(panel, -170);
         this.slot(panel, -290);
         loadSkin((err) => {
@@ -50,11 +52,11 @@ export class LyDemoPopup extends GMLayer {
     }
 
     private stepper(parent: Node, y: number): void {
-        const minus = this.put(parent, 'BtnSmallSecondary', -70, y, 72, 72);
+        const minus = this.put(parent, 'BtnSecondary', -70, y, 72, 72);
         this.put(minus, 'IconMinus', 0, 0, 40, 28);
         this.put(parent, 'PlateStepper', 50, y, 140, 72);
         addText(parent, '3', 28, skinInk, 140, 72).node.setPosition(50, y, 0);
-        const plus = this.put(parent, 'BtnSmallPrimary', 180, y, 72, 72);
+        const plus = this.put(parent, 'BtnPrimary', 180, y, 72, 72);
         this.put(plus, 'IconPlus', 0, 0, 40, 40);
     }
 
