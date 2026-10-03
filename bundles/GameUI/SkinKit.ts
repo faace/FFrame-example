@@ -3,7 +3,7 @@ import { loadSkin as loadSkinBundle, skinFrame as readSkin } from '../../../gmaj
 
 const SLICED = new Set([
     'TitleBar', 'Panel', 'primary', 'secondary', 'warning', 'neutral', 'info',
-    'TabNormal', 'TabSelected', 'PlateStepper', 'SliderTrack', 'ProgressFill', 'XpTrack', 'XpFill',
+    'TabNormal', 'TabSelected', 'PlateStepper', 'SliderTrack', 'ProgressFill', 'BarBg', 'BarFill',
 ]);
 
 /** 等开机载入的 Skin 包。已经在内存里则立刻回调 */

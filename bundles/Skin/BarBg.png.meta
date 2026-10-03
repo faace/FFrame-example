@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "16f21f42-a7a2-49b7-bef4-699b0a27fde0",
+  "uuid": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f",
   "files": [
     ".json",
     ".png"
@@ -11,7 +11,7 @@
     "6c48a": {
       "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@6c48a",
+      "uuid": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@6c48a",
       "imported": true,
       "files": [
         ".json"
@@ -26,17 +26,17 @@
         "premultiplyAlpha": false,
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "16f21f42-a7a2-49b7-bef4-699b0a27fde0",
+        "imageUuidOrDatabaseUri": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f",
         "visible": false
       },
-      "displayName": "XpFill",
+      "displayName": "BarBg",
       "id": "6c48a",
       "name": "texture"
     },
     "f9941": {
       "ver": "1.0.12",
       "importer": "sprite-frame",
-      "uuid": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@f9941",
+      "uuid": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@f9941",
       "imported": true,
       "files": [
         ".json"
@@ -50,34 +50,34 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 322,
-        "height": 55,
-        "rawWidth": 322,
-        "rawHeight": 55,
-        "borderTop": 18,
-        "borderBottom": 19,
-        "borderLeft": 19,
-        "borderRight": 19,
+        "width": 440,
+        "height": 70,
+        "rawWidth": 440,
+        "rawHeight": 70,
+        "borderTop": 25,
+        "borderBottom": 26,
+        "borderLeft": 26,
+        "borderRight": 25,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@6c48a",
+        "imageUuidOrDatabaseUri": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@6c48a",
         "vertices": {
           "rawPosition": [
-            -161,
-            -27.5,
+            -220,
+            -35,
             0,
-            161,
-            -27.5,
+            220,
+            -35,
             0,
-            -161,
-            27.5,
+            -220,
+            35,
             0,
-            161,
-            27.5,
+            220,
+            35,
             0
           ],
           "indexes": [
@@ -90,12 +90,12 @@
           ],
           "uv": [
             0,
-            55,
-            322,
-            55,
+            70,
+            440,
+            70,
             0,
             0,
-            322,
+            440,
             0
           ],
           "nuv": [
@@ -109,19 +109,19 @@
             1
           ],
           "minPos": [
-            -161,
-            -27.5,
+            -220,
+            -35,
             0
           ],
           "maxPos": [
-            161,
-            27.5,
+            220,
+            35,
             0
           ]
         },
         "atlasUuid": ""
       },
-      "displayName": "XpFill",
+      "displayName": "BarBg",
       "id": "f9941",
       "name": "spriteFrame"
     }
@@ -130,6 +130,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "16f21f42-a7a2-49b7-bef4-699b0a27fde0@6c48a"
+    "redirect": "0e53a6dd-c2a7-4b39-87de-13fc8517c40f@6c48a"
   }
 }
