@@ -17,9 +17,9 @@ export class LyDemoPopup extends GMLayer {
         this.put(panel, 'Panel', 0, 0, 600, 760);
         this.put(panel, 'TitleBar', 0, 316, 360, 64);
         addText(panel, '设置', 28, skinInk, 300, 64).node.setPosition(0, 316, 0);
-        const close = this.put(panel, 'BtnSecondary', 246, 316, 72, 72);
+        const close = this.put(panel, 'secondary', 246, 316, 72, 72);
         this.put(close, 'IconClose', 0, 0, 36, 36);
-        const help = this.put(panel, 'BtnSecondary', -246, 316, 72, 72);
+        const help = this.put(panel, 'secondary', -246, 316, 72, 72);
         this.put(help, 'IconHelp', 0, 0, 28, 40);
         gu.addClick(close, () => gu.closeLayer('LyDemoPopup'));
         gu.addClick(help, () => gu.alert('音乐、音效和语言都记在本机。'));
@@ -52,11 +52,11 @@ export class LyDemoPopup extends GMLayer {
     }
 
     private stepper(parent: Node, y: number): void {
-        const minus = this.put(parent, 'BtnSecondary', -70, y, 72, 72);
+        const minus = this.put(parent, 'secondary', -70, y, 72, 72);
         this.put(minus, 'IconMinus', 0, 0, 40, 28);
         this.put(parent, 'PlateStepper', 50, y, 140, 72);
         addText(parent, '3', 28, skinInk, 140, 72).node.setPosition(50, y, 0);
-        const plus = this.put(parent, 'BtnPrimary', 180, y, 72, 72);
+        const plus = this.put(parent, 'primary', 180, y, 72, 72);
         this.put(plus, 'IconPlus', 0, 0, 40, 40);
     }
 

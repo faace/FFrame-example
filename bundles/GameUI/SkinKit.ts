@@ -1,46 +1,18 @@
 import { Color, Label, Node, Sprite, SpriteFrame, Texture2D, UITransform, Widget } from 'cc';
-import { gm } from '../../../gmajor';
+import { loadSkin as loadSkinBundle, skinFrame as readSkin } from '../../../gmajor';
 
 const SLICED = new Set([
-    'TitleBar', 'Panel', 'BtnPrimary', 'BtnSecondary', 'BtnAd', 'BtnGold', 'BtnDiamond',
+    'TitleBar', 'Panel', 'primary', 'secondary', 'warning', 'neutral', 'info',
     'TabNormal', 'TabSelected', 'PlateStepper', 'SliderTrack', 'ProgressFill', 'XpTrack', 'XpFill',
 ]);
 
-let frames: Map<string, SpriteFrame> | null = null;
-let waiters: Array<(err: Error | null) => void> | null = null;
-
-/** 读框架默认皮 GMSkin（gmajor/ui/skin）；已在内存则立刻回调 */
+/** 等开机载入的 Skin 包。已经在内存里则立刻回调 */
 export function loadSkin(done: (err: Error | null) => void): void {
-    if (frames) return done(null);
-    if (waiters) return waiters.push(done);
-    waiters = [done];
-    const fail = (err: Error) => {
-        const pending = waiters ?? [];
-        waiters = null;
-        pending.forEach((fn) => fn(err));
-    };
-    const afterBundle = (err: Error | null) => {
-        if (err) return fail(err);
-        const bundle = gm.resource.getBundle('GMSkin');
-        if (!bundle) return fail(new Error('[Skin] GMSkin 未加载'));
-        bundle.loadDir('', SpriteFrame, (loadErr, assets) => {
-            const pending = waiters ?? [];
-            waiters = null;
-            frames = assets?.length ? indexFrames(assets) : new Map();
-            if (!frames.size) {
-                pending.forEach((fn) => fn(loadErr ?? new Error('[Skin] 没有 SpriteFrame')));
-                frames = null;
-                return;
-            }
-            finishSkin(pending);
-        });
-    };
-    if (gm.resource.hasBundle('GMSkin')) return afterBundle(null);
-    gm.resource.loadBundle('GMSkin', afterBundle);
+    loadSkinBundle(done);
 }
 
-export function skinFrame(name: string): SpriteFrame | null { // 未载入时是 null
-    return frames?.get(name) ?? null;
+export function skinFrame(name: string): SpriteFrame | null { // 未载入时是 null；缺槽是白图
+    return readSkin(name);
 }
 
 /** 在 parent 下挂一张皮；九宫格件用 SLICED，其余原图 */
@@ -72,20 +44,6 @@ export function addText(parent: Node, text: string, fontSize: number, color: Col
 
 export const skinInk = new Color(92, 64, 32, 255); // 奶油底上的字
 export const skinPaper = new Color(248, 238, 211, 255); // 和 v3 底色接近
-
-function finishSkin(pending: Array<(err: Error | null) => void>): void {
-    console.info('[Skin] 已载入', frames?.size, frames ? [...frames.keys()].join(' ') : '');
-    pending.forEach((fn) => fn(null));
-}
-
-function indexFrames(assets: SpriteFrame[]): Map<string, SpriteFrame> {
-    const map = new Map<string, SpriteFrame>();
-    for (const frame of assets) {
-        const name = frame.name.replace(/\/spriteFrame$/, '').replace(/\.png$/i, '');
-        if (name && name !== 'spriteFrame') map.set(name, frame);
-    }
-    return map;
-}
 
 export function dress(node: Node, name: string): void { // 贴图后锁回自定义尺寸，避免被原图像素撑开
     const frame = skinFrame(name);

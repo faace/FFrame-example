@@ -18,8 +18,8 @@ export class LyAlert extends GMAlert {
         this.note(addSkin(panel, 'TitleBar', 0, 118, 360, 64), 'TitleBar');
         addText(panel, '提示', 28, skinInk, 300, 64).node.setPosition(0, 118, 0);
         this.body = this.makeLabel(panel, 'body', 28, 0, 28, 440, 100);
-        this.btnCancel = this.makeBtn(panel, 'btnCancel', 'BtnSecondary', '取消', -120, -108, skinInk);
-        this.btnOk = this.makeBtn(panel, 'btnOk', 'BtnPrimary', '确定', 120, -108, Color.WHITE);
+        this.btnCancel = this.makeBtn(panel, 'btnCancel', 'secondary', '取消', -120, -108, skinInk);
+        this.btnOk = this.makeBtn(panel, 'btnOk', 'primary', '确定', 120, -108, Color.WHITE);
         this.cancelLabel = this.btnCancel.getChildByName('label')?.getComponent(Label) ?? null;
         this.okLabel = this.btnOk.getChildByName('label')?.getComponent(Label) ?? null;
         loadSkin((err) => {
