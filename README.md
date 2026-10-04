@@ -17,7 +17,7 @@ git clone https://github.com/faace/FFrame-example.git assets/game
 - `ScMain` 继承 `GMScene`，在 `onStart` 里调用 `gm.boot(config)`。
 - 包入口继承 `GMBundleEntryBase`，用 `registerBundleEntry` 登记。绑定名等于叶子目录名。
 - 界面脚本走 `GMScene` / `GMLayer` / `GMComponent`。确认框皮继承 `GMAlert`。
-- 控件用框架预制体：`PfGMBtn`、`PfGMTitle`、`PfGMSlider`、`PfGMBar`、`PfGMStepper`。
+- 控件用框架预制体：`PfGMBtn`、`PfGMTitle`、`PfGMSlider`、`PfGMBar`、`PfGMStepper`、`PfGMTabs`。
 - 数据用 `gd` / `gl`，事件用 `on` / `emit`，点击用 `gu.addClick`，挡操作用 `gm.ui.loadingShow`。
 - 平台只喊 `gp`。
 
@@ -57,7 +57,7 @@ bundles/Demo/DemoChild/ 子包生命周期示例，开机不绑定
 
 框架控件会来取哪些文件，看框架 README 的「框架会取的图」。本仓库已经按那张清单放了同名 png。样图在框架的 `assets/gmajor/ui/skin/`，和这里 uuid 不同，播放只用这里。
 
-这个示例另外还在用、但框架不会按名字来取的图：`panel`、`slot_item`、`frame_select`，以及 `icon_music`、`icon_sfx`、`icon_settings`、`icon_gold`、`icon_diamond` 等。设置弹层 `LySetting` 用它们铺背板和图标。
+这个示例另外还在用、但框架不会按名字来取的图：`slot_item`、`frame_select`，以及 `icon_music`、`icon_sfx`、`icon_settings`、`icon_gold`、`icon_diamond` 等。设置弹层 `LySetting` 用它们铺图标。`panel` 已由 `PfGMTabs` 按名字来取。
 
 ## 开机会做的
 
@@ -74,4 +74,5 @@ bundles/Demo/DemoChild/ 子包生命周期示例，开机不绑定
 
 - **LySetting**：设置。滑条、进度条、步进用框架控件。背板和图标用 `Skin` 里的蛇形文件名贴上。遮罩由框架克隆。
 - **PfDemoItem**：列表项。拿到脚本后改数量，不直接改节点。
+- **PfDemoTabPage**：页签内容，继承 `GMTabPage`。首页再点一次「页签」打开或关掉三页（概况、背包、记录）。记录页的 `onShow` 会等两秒，用来看 loading。
 - **DemoChild**：子包的绑定生命周期（`onInit` / `onBind` / `onStart` / `onUnbind` / `onRemove`），只打日志。要看它，得由别的包再去绑定 `DemoChild`。

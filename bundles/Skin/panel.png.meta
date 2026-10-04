@@ -2,82 +2,75 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "55407d1a-c65c-4d01-b710-32e4cd23d8dd",
+  "uuid": "f5cd60bb-b119-4432-a9c4-9a59aa476106",
   "files": [
     ".json",
     ".png"
   ],
   "subMetas": {
     "6c48a": {
-      "ver": "1.0.22",
       "importer": "texture",
-      "uuid": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@6c48a",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {},
+      "uuid": "f5cd60bb-b119-4432-a9c4-9a59aa476106@6c48a",
+      "displayName": "panel",
+      "id": "6c48a",
+      "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "f5cd60bb-b119-4432-a9c4-9a59aa476106",
+        "isUuid": true,
+        "visible": false,
         "minfilter": "linear",
         "magfilter": "linear",
         "mipfilter": "none",
-        "premultiplyAlpha": false,
-        "anisotropy": 0,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "55407d1a-c65c-4d01-b710-32e4cd23d8dd",
-        "visible": false
+        "anisotropy": 0
       },
-      "displayName": "panel",
-      "id": "6c48a",
-      "name": "texture"
-    },
-    "f9941": {
-      "ver": "1.0.12",
-      "importer": "sprite-frame",
-      "uuid": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@f9941",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
       ],
-      "subMetas": {},
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "f5cd60bb-b119-4432-a9c4-9a59aa476106@f9941",
+      "displayName": "panel",
+      "id": "f9941",
+      "name": "spriteFrame",
       "userData": {
-        "trimType": "auto",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 258,
-        "height": 269,
-        "rawWidth": 258,
-        "rawHeight": 269,
-        "borderTop": 28,
-        "borderBottom": 31,
-        "borderLeft": 23,
-        "borderRight": 25,
+        "width": 96,
+        "height": 96,
+        "rawWidth": 96,
+        "rawHeight": 96,
+        "borderTop": 20,
+        "borderBottom": 20,
+        "borderLeft": 20,
+        "borderRight": 20,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@6c48a",
         "vertices": {
           "rawPosition": [
-            -129,
-            -134.5,
+            -48,
+            -48,
             0,
-            129,
-            -134.5,
+            48,
+            -48,
             0,
-            -129,
-            134.5,
+            -48,
+            48,
             0,
-            129,
-            134.5,
+            48,
+            48,
             0
           ],
           "indexes": [
@@ -90,12 +83,12 @@
           ],
           "uv": [
             0,
-            269,
-            258,
-            269,
+            96,
+            96,
+            96,
             0,
             0,
-            258,
+            96,
             0
           ],
           "nuv": [
@@ -109,27 +102,33 @@
             1
           ],
           "minPos": [
-            -129,
-            -134.5,
+            -48,
+            -48,
             0
           ],
           "maxPos": [
-            129,
-            134.5,
+            48,
+            48,
             0
           ]
         },
-        "atlasUuid": ""
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f5cd60bb-b119-4432-a9c4-9a59aa476106@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
       },
-      "displayName": "panel",
-      "id": "f9941",
-      "name": "spriteFrame"
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
     }
   },
   "userData": {
     "type": "sprite-frame",
-    "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "55407d1a-c65c-4d01-b710-32e4cd23d8dd@6c48a"
+    "hasAlpha": true,
+    "redirect": "f5cd60bb-b119-4432-a9c4-9a59aa476106@6c48a"
   }
 }
