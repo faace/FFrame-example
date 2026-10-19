@@ -55,7 +55,7 @@ bundles/Demo/DemoChild/ 子包生命周期示例，开机不绑定
 
 图放在 `bundles/Skin/`，文件名小写蛇形。`gm.boot` 会加载 Bundle `Skin`，不把这个包写进 `boot`。
 
-框架控件会来取哪些文件，看框架 README 的「框架会取的图」。本仓库已经按那张清单放了同名 png。样图在框架的 `assets/gmajor/ui/skin/`，和这里 uuid 不同，播放只用这里。
+框架控件会来取哪些文件，看框架 README 的「框架会取的图」。本仓库已经按那张清单放了同名 png。播放只用这里。
 
 这个示例另外还在用、但框架不会按名字来取的图：`slot_item`、`frame_select`，以及 `icon_music`、`icon_sfx`、`icon_settings`、`icon_gold`、`icon_diamond` 等。设置弹层 `LySetting` 用它们铺图标。`panel` 已由 `PfGMTabs` 按名字来取。
 
